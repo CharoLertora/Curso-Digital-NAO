@@ -1,0 +1,81 @@
+
+.navbar div h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+    text-align: center;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.40);
+    font-weight: 700;
+    padding: auto;
+    margin-top: 0.25rem;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.btn {
+    background: linear-gradient(94deg, #F7B733 0%, rgba(247, 183, 51, 0.54) 94.28%);
+    border-radius: 0.625rem;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.35);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 500;
+}
+
+header.masthead {
+    background: linear-gradient(180deg, rgba(74, 189, 172, 0.77) 0%, rgba(74, 189, 172, 0.40) 100%);
+    border-radius: 0rem 0rem 1.25rem 1.25rem;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.conteiner-head img {
+    max-block-size: 15rem;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.conteiner-head h1 {
+    text-shadow: 0px 4px 4px rgba(35, 68, 60, 0.55);
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.conteiner-head p {
+    font-size: 1.05rem;
+}
+
+.features h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 1.15rem;
+}
+
+.showcase .showcase-text {
+    padding: 3rem;
+}
+
+.showcase .showcase-text h3 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.showcase .showcase-img {
+    min-height: 30rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (min-width: 768px) {
+    .showcase .showcase-text {
+        padding: 7rem;
+    }
+}
+
+.container-cierre {
+    background: linear-gradient(180deg, rgba(74, 189, 172, 0.77) 0%, rgba(74, 189, 172, 0.40) 100%);
+    border-radius: 0rem 0rem 1.25rem 1.25rem;
+}
+
+.footer li {
+    padding: 1rem 1rem 0 0;
+}
