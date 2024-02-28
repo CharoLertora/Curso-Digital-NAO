@@ -5,12 +5,12 @@ package com.top10autores.integracion.modelo;
  * La clase AutorModelo cumple con el modelo para los autores de la API.
  *
  * @author Charo Lértora
- * @version 1.1
+ * @version 1.2
  * */
 public class AutorModelo {
-    private String autorId;
     private String nombre;
-    private String afiliacion;
+    private String link;
+    private String tituloArticulo;
 
 
     /**
@@ -23,31 +23,16 @@ public class AutorModelo {
     /**
      * Constructor con parámetros.
      *
-     * @param autorId representa el id del autor
+     * @param tituloArticulo representa el titulo del artículo en el que participa el autor
      * @param nombre representa el nombre del autor
-     * @param afiliacion representa las afiliaciones que tiene el autor
+     * @param link representa las linkes que tiene el autor
      * */
-    public AutorModelo(String autorId, String nombre, String afiliacion) {
-        this.autorId = autorId;
+    public AutorModelo(String tituloArticulo, String nombre, String link) {
+        this.tituloArticulo = tituloArticulo;
         this.nombre = nombre;
-        this.afiliacion = afiliacion;
+        this.link = link;
     }
 
-    /**
-     * Función que devuelve el id del autor.
-     * @return autorID(String)
-     * */
-    public String getAutorId() {
-        return autorId;
-    }
-
-    /**
-     * Método que sirve para modificar el id del autor
-     * @param autorId representa el nuevo id del autor
-     */
-    public void setAutorId(String autorId) {
-        this.autorId = autorId;
-    }
 
     /**
      * Función que devuelve el nombre del autor
@@ -56,6 +41,7 @@ public class AutorModelo {
     public String getNombre() {
         return nombre;
     }
+
 
     /**
      * Método que sirve para modificar el nombre del autor
@@ -66,19 +52,34 @@ public class AutorModelo {
     }
 
     /**
-     * Función que devuelve las afiliaciones del autor
-     * @return afiliacion(String)
+     * Función que devuelve el link del articulo del autor
+     * @return link(String)
      */
-    public String getAfiliacion() {
-        return afiliacion;
+    public String getLink() {
+        return link;
     }
 
     /**
-     * Método que sirve para modificar las afiliaciones del autor
-     * @param afiliacion representa las nuevas afiliaciones del autor
+     * Método que sirve para modificar el link del autor
+     * @param link representa el nuevo link del autor
      */
-    public void setAfiliacion(String afiliacion) {
-        this.afiliacion = afiliacion;
+    public void setLink(String link) {
+        this.link = link;
     }
 
+    /**
+     * Función que devuelve el titulo del articulo del autor
+     * @return tituloArticulo(String)
+     */
+    public String getTituloArticulo() {
+        return tituloArticulo;
+    }
+
+    /**
+     * Método que sirve para modificar el titulo del articulo del autor
+     * @param tituloArticulo representa el nuevo titulo para el artículo del autor
+     */
+    public void setTituloArticulo(String tituloArticulo) {
+        this.tituloArticulo = tituloArticulo;
+    }
 }

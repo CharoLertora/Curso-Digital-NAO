@@ -9,7 +9,7 @@ import java.util.Scanner;
  * La clase AutorVista cumple con la vista para los autores de la API.
  *
  * @author Charo Lértora
- * @version 1.0
+ * @version 1.2
  * */
 public class AutorVista {
 
@@ -32,17 +32,6 @@ public class AutorVista {
         this.autorModelo = autorModelo;
     }
 
-    /**
-     * Pide al usuario que ingrese por pantalla el id del autor que queremos buscar.
-     * @return id(String)
-     */
-    public String pedirIdAutor() {
-
-        System.out.println("Ingrese el ID del autorModelo: ");
-        String id = scan.next();
-
-        return id;
-    }
 
     /**
      * Método que sirve para mostrar los datos de un autor.
@@ -50,9 +39,10 @@ public class AutorVista {
      */
     public void mostrarAutor(@NotNull AutorModelo autorModelo) {
         System.out.println(
-                "AUTOR NRO: " + autorModelo.getAutorId() +
+                "--------------------------------------" +
                 "\nNombre: " + autorModelo.getNombre() +
-                "\nAfiliación: " + autorModelo.getAfiliacion() +
+                "\nTitulo del artículo: " + autorModelo.getTituloArticulo() +
+                "\nLink: " + autorModelo.getLink() +
                 "\n");
     }
 
@@ -61,12 +51,11 @@ public class AutorVista {
      * @return respuesta(int)
      */
     public int continuarBuscando() {
+
         System.out.println("Desea hacer otra búsqueda?: \n" +
                 "1. Si\n" +
                 "2. No");
-        int respuesta = scan.nextInt();
-
-        return respuesta;
+        return scan.nextInt();
     }
 
 }

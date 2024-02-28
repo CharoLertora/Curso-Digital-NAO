@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.top10autores.integracion"},{"l":"com.top10autores.integracion.controlador"},{"l":"com.top10autores.integracion.modelo"},{"l":"com.top10autores.integracion.vista"}];updateSearchResults();

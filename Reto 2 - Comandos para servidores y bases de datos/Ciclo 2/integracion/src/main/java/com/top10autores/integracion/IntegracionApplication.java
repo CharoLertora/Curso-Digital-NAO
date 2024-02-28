@@ -10,13 +10,13 @@ import java.net.URISyntaxException;
 
 
 /**
- * @author Charo Lértora
- * @version 1.0
- * @see AutorVista()
- * @see AutorModelo ()
- * @see AutorControlador()
- *
  * El método IntegracionApplication tiene al método main el cual se encarga de inicializar la app.
+ *
+ * @author Charo Lértora
+ * @version 1.2
+ * @see AutorVista
+ * @see AutorModelo
+ * @see AutorControlador
  * */
 @SpringBootApplication
 public class IntegracionApplication {
