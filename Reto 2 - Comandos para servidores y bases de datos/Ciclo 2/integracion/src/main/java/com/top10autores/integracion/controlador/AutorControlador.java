@@ -60,7 +60,7 @@ public class AutorControlador {
         int respuestaUsuario = 1;
         do {
 
-            System.out.println("Ingrese el ámbito donde desea realizar la búsqueda: (Ej: ciencia, arte, política, etc");
+            System.out.println("Ingrese el ámbito donde desea realizar la búsqueda: (Ej: ciencia, arte, política, etc)");
             String ambito = scan.next();;
             consultarAutores(ambito);
 
@@ -93,7 +93,6 @@ public class AutorControlador {
 
             String jsonResp = respuesta.body();
             JSONObject jsonObject = new JSONObject(jsonResp);
-            System.out.println(jsonResp);
 
             if (jsonObject.has("organic_results")) {
 
