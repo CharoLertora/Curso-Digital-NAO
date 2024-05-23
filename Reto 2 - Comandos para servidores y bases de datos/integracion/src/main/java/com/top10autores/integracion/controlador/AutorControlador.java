@@ -68,7 +68,7 @@ public class AutorControlador {
             respuestaUsuario = vistaAutor.continuarBuscando();
 
         } while(respuestaUsuario == 1);
-
+        scan.close();
     }
 
     /**

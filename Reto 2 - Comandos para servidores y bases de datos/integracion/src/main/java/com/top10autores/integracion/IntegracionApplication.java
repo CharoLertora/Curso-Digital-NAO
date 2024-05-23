@@ -7,6 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.*;
 
 
 /**
@@ -21,13 +24,18 @@ import java.net.URISyntaxException;
 @SpringBootApplication
 public class IntegracionApplication {
 
-	public static void main(String[] args) throws IOException, InterruptedException, URISyntaxException {
+	@SuppressWarnings("deprecation")
+    public static void main(String[] args) throws IOException, InterruptedException, URISyntaxException, ClassNotFoundException {
+
 		AutorVista vista = new AutorVista();
 		AutorModelo modelo = new AutorModelo();
 		AutorControlador controlador = new AutorControlador(modelo, vista);
-
+		BaseDeDatos BD = new BaseDeDatos("jdbc:mysql://localhost:3306/busquedas", "root", "#ChLertora1711*");
+        BD.crearBasedeDatos();
+        /*
 		controlador.iniciarApp();
-
+         */
+        
 		System.out.println("Gracias por elegirnos! Hasta pronto :)");
 
 	}
