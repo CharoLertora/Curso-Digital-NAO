@@ -5,12 +5,14 @@ package com.top10autores.integracion.modelo;
  * La clase AutorModelo cumple con el modelo para los autores de la API.
  *
  * @author Charo Lértora
- * @version 1.2
+ * @version 1.3
  * */
 public class AutorModelo {
+    private String idAutor;
     private String nombre;
     private String link;
     private String tituloArticulo;
+    private String ambito;
 
 
     /**
@@ -20,6 +22,7 @@ public class AutorModelo {
         super();
     }
 
+
     /**
      * Constructor con parámetros.
      *
@@ -27,10 +30,12 @@ public class AutorModelo {
      * @param nombre representa el nombre del autor
      * @param link representa las linkes que tiene el autor
      * */
-    public AutorModelo(String tituloArticulo, String nombre, String link) {
+    public AutorModelo(String id, String tituloArticulo, String nombre, String link, String ambito) {
+        this.idAutor = id;
         this.tituloArticulo = tituloArticulo;
         this.nombre = nombre;
         this.link = link;
+        this.ambito = ambito;
     }
 
 
@@ -51,6 +56,7 @@ public class AutorModelo {
         this.nombre = nombre;
     }
 
+
     /**
      * Función que devuelve el link del articulo del autor
      * @return link(String)
@@ -58,6 +64,7 @@ public class AutorModelo {
     public String getLink() {
         return link;
     }
+
 
     /**
      * Método que sirve para modificar el link del autor
@@ -67,6 +74,7 @@ public class AutorModelo {
         this.link = link;
     }
 
+
     /**
      * Función que devuelve el titulo del articulo del autor
      * @return tituloArticulo(String)
@@ -75,6 +83,7 @@ public class AutorModelo {
         return tituloArticulo;
     }
 
+
     /**
      * Método que sirve para modificar el titulo del articulo del autor
      * @param tituloArticulo representa el nuevo titulo para el artículo del autor
@@ -82,4 +91,42 @@ public class AutorModelo {
     public void setTituloArticulo(String tituloArticulo) {
         this.tituloArticulo = tituloArticulo;
     }
+
+
+    /**
+     * Función que devuelve el ID del autor
+     * @return idAutor(String)
+     */
+    public String getIdAutor() {
+        return idAutor;
+    }
+
+
+    /**
+     * Método que sirve para modificar el ID del autor
+     * @param idAutor representa el nuevo ID del autor
+     */
+    public void setIdAutor(String idAutor) {
+        this.idAutor = idAutor;
+    }
+
+
+    /**
+     * Función que devuelve el ambito del autor
+     * @return ambito(String)
+     */
+    public String getAmbito() {
+        return ambito;
+    }
+
+
+    /**
+     * Método que sirve para modificar el ambito del autor
+     * @param ambito representa el nuevo ambito del autor
+     */
+    public void setAmbito(String ambito) {
+        this.ambito = ambito;
+    }
+
+    
 }
