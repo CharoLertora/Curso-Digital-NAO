@@ -22,6 +22,7 @@ El curso está pensado para que los aprendices experimentemos como resolver "ret
 - El objetivo principal de este reto es crear un proyecto para poder extraer e integrar la información del Top 10 de investigadores de las Universidades.
 ### Recursos utilizados:
 -  Java
+-  Maven
 -  JDBC
 -  MySQL
 -  SerpApi
