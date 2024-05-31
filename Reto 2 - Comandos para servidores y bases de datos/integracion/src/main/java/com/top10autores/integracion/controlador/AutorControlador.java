@@ -84,7 +84,6 @@ public class AutorControlador {
             }
 
         } while(respuestaUsuario != 6);
-        scan.close();
     }
 
 
@@ -93,14 +92,14 @@ public class AutorControlador {
      * Los primeros 10 autores encontrados, se guardarán en nuestro sistema de Base de Datos.
      */
     public void busquedaAPI() {
-        Scanner scan = new Scanner(System.in);
+        
 
         System.out.println("Ingrese el ámbito donde desea realizar la búsqueda: (Ej: ciencia, arte, política, etc)");
         String ambito = scan.next();
         consultarAutores(ambito);
 
         mostrarAutores(this.autoresGuardados);
-        scan.close();
+        
     }
 
 

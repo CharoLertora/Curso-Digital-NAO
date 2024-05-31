@@ -44,6 +44,7 @@ public class IntegracionApplication {
         
 		System.out.println("Gracias por elegirnos! Hasta pronto :)");
 		BD.cerrarConexion();
+		scan.close();
 	}
 
 }
