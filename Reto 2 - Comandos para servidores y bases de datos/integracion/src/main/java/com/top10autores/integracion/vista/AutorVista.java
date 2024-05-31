@@ -9,27 +9,18 @@ import java.util.Scanner;
  * La clase AutorVista cumple con la vista para los autores de la API.
  *
  * @author Charo Lértora
- * @version 1.2
+ * @version 1.3
  * */
 public class AutorVista {
 
-    private AutorModelo autorModelo;
-
     private Scanner scan = new Scanner(System.in);
+
 
     /**
      * Constructor sin parámetros.
      */
     public AutorVista() {
         super();
-    }
-
-    /**
-     * Constructor con parámetros
-     * @param autorModelo Objeto necesario para el modelo del autor que utilizaremos.
-     */
-    public AutorVista(AutorModelo autorModelo) {
-        this.autorModelo = autorModelo;
     }
 
 
@@ -41,20 +32,27 @@ public class AutorVista {
         System.out.println(
                 "--------------------------------------" +
                 "\nNombre: " + autorModelo.getNombre() +
+                "\nID: " + autorModelo.getIdAutor() +
                 "\nTitulo del artículo: " + autorModelo.getTituloArticulo() +
                 "\nLink: " + autorModelo.getLink() +
+                "\nAmbito: " + autorModelo.getAmbito() +
                 "\n");
     }
+
 
     /**
      * Función que retornara un valor para saber si el usuario desea seguir buscando autores o no.
      * @return respuesta(int)
      */
-    public int continuarBuscando() {
+    public int menuOpciones() {
 
-        System.out.println("Desea hacer otra búsqueda?: \n" +
-                "1. Si\n" +
-                "2. No");
+        System.out.println("Ingrese el número que corresponda a la opción elegida: \n" +
+                "1. Realizar otra búsqueda.\n" +
+                "2. BUSCAR un autor POR ID cargado en el sistema.\n" +
+                "3. BUSCAR autores POR AMBITO cargados en el sistema.\n" +
+                "4. ELIMINAR autores POR ID cargados en el sistema.\n" +
+                "5. ELIMINAR autores POR AMBITO cargados en el sistema.\n" +
+                "6. Salir.");
         return scan.nextInt();
     }
 
