@@ -29,8 +29,8 @@ jobs:
         distribution: 'temurin'
       #Almaceno las dependencias en el cache para acelerar las ejecuciones de workflow.
         cache: maven
-    - name: Build with Maven
-      run: mvn -B package --file pom.xml
+    - name: Run the Maven verify phase
+      run: mvn --batch-mode --update-snapshots verify
     - run: mkdir staging && cp target/*.jar staging
     - uses: actions/upload-artifact@v4
       with:
