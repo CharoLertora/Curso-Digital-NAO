@@ -30,7 +30,7 @@ jobs:
       #Almaceno las dependencias en el cache para acelerar las ejecuciones de workflow.
         cache: maven
     - name: Run the Maven verify phase
-      run: mvn -f C:/Users/charo/Cursos/Curso-Digital-NAO/Reto 2 - Comandos para servidores y bases de datos/integracion/pom.xml --batch-mode --update-snapshots verify
+      run: mvn -B package -f /c/Users/charo/Cursos/Curso-Digital-NAO/Reto2-Comandos-para-servidores-y-bases-de-datos/integracion/pom.xml
     - run: mkdir staging && cp target/*.jar staging
     - uses: actions/upload-artifact@v4
       with:
