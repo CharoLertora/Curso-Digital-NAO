@@ -1,0 +1,39 @@
+# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven
+
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+name: Java CI with Maven
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    #Se especifica la versión que utiliza el proyecto
+    - uses: actions/checkout@v4
+    - name: Set up JDK 21
+      uses: actions/setup-java@v4.2.1
+      with:
+        java-version: '21'
+        distribution: 'temurin'
+      #Almaceno las dependencias en el cache para acelerar las ejecuciones de workflow.
+        cache: maven
+    - name: Run the Maven verify phase
+      run: mvn -B package -f /c/Users/charo/Cursos/Curso-Digital-NAO/Reto2-Comandos-para-servidores-y-bases-de-datos/integracion/pom.xml
+    - run: mkdir staging && cp target/*.jar staging
+    - uses: actions/upload-artifact@v4
+      with:
+        name: Package
+        path: staging
+      
