@@ -3,7 +3,6 @@ package com.top10autores.integracion;
 import com.top10autores.integracion.controlador.AutorControlador;
 import com.top10autores.integracion.modelo.AutorModelo;
 import com.top10autores.integracion.vista.AutorVista;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -20,7 +19,6 @@ import java.util.Scanner;
  * @see AutorModelo
  * @see AutorControlador
  * */
-@SpringBootApplication
 public class IntegracionApplication {
 
 	public static void main(String[] args) throws IOException, InterruptedException, URISyntaxException, ClassNotFoundException {

@@ -1,8 +1,6 @@
 package com.top10autores.integracion.vista;
 
 import com.top10autores.integracion.modelo.AutorModelo;
-import org.jetbrains.annotations.NotNull;
-
 import java.util.Scanner;
 
 /**
@@ -28,7 +26,7 @@ public class AutorVista {
      * Método que sirve para mostrar los datos de un autor.
      * @param autorModelo Objeto que contendrá la información que queremos mostrar, no puede ser nulo.
      */
-    public void mostrarAutor(@NotNull AutorModelo autorModelo) {
+    public void mostrarAutor(AutorModelo autorModelo) {
         System.out.println(
                 "--------------------------------------" +
                 "\nNombre: " + autorModelo.getNombre() +
